@@ -11,7 +11,8 @@
                 "Gadwall": 2,
                 "Other": 0
             },
-            "guide": "Dan"
+            "guide": "Dan",
+            "comments": "Ground Blind Leaking!"
         },
         {
             "id": 2,
@@ -24,7 +25,8 @@
                 "Gadwall": 2,
                 "Other": 0
             },
-            "guide": "Paul"
+            "guide": "Paul",
+            "comments": "Canvasback liked to fly above the Grain in NW corner!"
         }
     ]
 }

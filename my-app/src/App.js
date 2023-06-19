@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import About from './About';
-import DiaryList from './DiaryList';
+import JournalList from './JournalList';
 import Navbar from './Navbar';
 
 
@@ -18,6 +18,18 @@ useEffect(()=> {
     <div className="App">
       <Navbar />
       <About />
+      <JournalList excursions={excursionList} />
+    </div>
+  );
+}
+
+export default App;
+
+
+
+{/* <div className="App">
+      <Navbar />
+      <About />
       <DiaryList />
       <header className="App-header">
         <p>
@@ -32,8 +44,4 @@ useEffect(()=> {
           Learn React
         </a>
       </header>
-    </div>
-  );
-}
-
-export default App;
+    </div> */}
