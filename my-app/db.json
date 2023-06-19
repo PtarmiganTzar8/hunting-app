@@ -1,0 +1,30 @@
+{
+    "excursions": [
+        {
+            "id": 1,
+            "date": "today",
+            "location": "upper pond",
+            "bag": {
+                "Mallard": 3,
+                "Widgeon": 1,
+                "Canvasback": 1,
+                "Gadwall": 2,
+                "Other":
+            },
+            "guide": "Dan"
+        },
+        {
+            "id": 2,
+            "date": "yesterday",
+            "location": "lower pond",
+            "bag": {
+                "Mallard": 1,
+                "Widgeon": 2,
+                "Canvasback": 2,
+                "Gadwall": 2,
+                "Other": 0
+            },
+            "guide": "Paul"
+        }
+    ]
+}
