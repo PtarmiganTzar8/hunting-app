@@ -5,9 +5,9 @@
             "date": "today",
             "location": "upper pond",
             "bag": {
-                "Mallard": 3,
-                "Widgeon": 1,
-                "Canvasback": 1,
+                "Mallard": 1,
+                "Widgeon": 2,
+                "Canvasback": 2,
                 "Gadwall": 2,
                 "Other": 0
             },
