@@ -3,6 +3,7 @@ import './App.css';
 import About from './About';
 import JournalList from './JournalList';
 import Navbar from './Navbar';
+import JournalForm from './JournalForm';
 
 
 function App() {
@@ -19,6 +20,7 @@ useEffect(()=> {
       <Navbar />
       <About />
       <JournalList excursions={excursionList} />
+      <JournalForm />
     </div>
   );
 }
