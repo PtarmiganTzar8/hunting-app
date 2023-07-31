@@ -16,16 +16,27 @@ function JournalForm() {
     })
 
     function handleChange(event) {
-        console.log(formData.mallard + formData.widgeon + formData.canvasback + formData.gadwall + formData.other)
-        if (formData.mallard + formData.widgeon + formData.canvasback + formData.gadwall + formData.other == 7) {
-            console.log("uh oh")
-        }
         setFormData({
             ...formData,
             [event.target.name]: event.target.value
         })
     }
 
+    // function handleSubmit(event) {
+    //     event.preventDefault();
+    //     const excursionData = {}
+    //     fetch("http://localhost:3000/excursions",{
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify(excursionData)
+    //     })
+    //     .then((r) => r.json())
+    //     .then((newExcursion) => fUNCTION(newExcursion))
+
+    //     }
+    // }
         console.log(formData)
 
     return(
