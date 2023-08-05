@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function JournalForm() {
+function JournalForm({ onNewExcursion }) {
     const [formData, setFormData] = useState({
         id: "",
         date: "",
@@ -22,33 +22,53 @@ function JournalForm() {
         })
     }
 
-    // function handleSubmit(event) {
-    //     event.preventDefault();
-    //     const excursionData = {}
-    //     fetch("http://localhost:3000/excursions",{
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json"
-    //         },
-    //         body: JSON.stringify(excursionData)
-    //     })
-    //     .then((r) => r.json())
-    //     .then((newExcursion) => fUNCTION(newExcursion))
-
-    //     }
-    // }
+    function handleSubmit(event) {
+        event.preventDefault();
+        const excursionData = {
+            id: formData.id,
+            date: formData.date,
+            location: formData.location,
+            mallard: formData.mallard,
+            widgeon: formData.widgeon,
+            canvasback: formData.canvasback,
+            gadwall: formData.gadwall,
+            other: formData.other,
+            guide: formData.guide,
+            image: formData.image,
+            comments: formData.comments
+        }
+        fetch("http://localhost:3000/excursions",{
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(excursionData)
+        })
+        .then((r) => r.json())
+        .then((newExcursion) => onNewExcursion(newExcursion))
+    }
+    
         console.log(formData)
 
     return(
-        <section>
+        <section id="form">
             <h1>We hope you had a great hunt! Please submit your information.</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label>
                     Today's Date:
                     <input
                     type="text"
                     name="date"
                     value={formData.date}
+                    onChange={handleChange}
+                    />
+                </label><br></br>
+                <label>
+                    Entry #:
+                    <input
+                    type="text"
+                    name="id"
+                    value={formData.id}
                     onChange={handleChange}
                     />
                 </label><br></br>
@@ -104,6 +124,7 @@ function JournalForm() {
                     onChange={handleChange}
                     />
                 </label>
+                <button type="submit">Submit Hunt!</button><br></br>
             </form>
         </section>
     )

@@ -11,3 +11,51 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+button {
+  font-family: "Press Start 2p", cursive;
+  font-size: 0.8rem;
+  border: 3px solid black;
+  padding: 0.5rem 1rem;
+  background-color: rgb(245, 158, 158);
+  box-shadow: inset -3px -3px 0 0 rgb(252, 124, 124);
+  transition: all 0.1s ease-in;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  border-style: groove;	
+  border: 1px solid black;
+  padding: 10px;
+}
+
+#form {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}

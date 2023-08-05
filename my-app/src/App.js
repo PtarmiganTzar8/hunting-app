@@ -15,12 +15,16 @@ useEffect(()=> {
   .then((data) => setExcursionList(data));
 }, []);
 
+function handleNewExcursion(newExcursion) {
+  setExcursionList([...excursionList, newExcursion])
+}
+
   return (
     <div className="App">
       <Navbar />
       <About />
       <JournalList excursions={excursionList} />
-      <JournalForm />
+      <JournalForm onNewExcursion={handleNewExcursion} />
     </div>
   );
 }
